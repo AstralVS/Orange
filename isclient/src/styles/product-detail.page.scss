@@ -1,0 +1,129 @@
+$primary-orange: #ffa500;
+$text-color-dark: #333;
+$text-color-light: #666;
+$price-color: #d9534f;
+$button-text-color: white;
+$border-color: #e0e0e0;
+
+.product-detail-page-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-detail-loading,
+.product-detail-error,
+.product-detail-not-found {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 40px 0;
+    color: $text-color-light;
+}
+.product-detail-error {
+    color: red;
+}
+
+.product-detail-main-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.product-detail-image-container {
+    flex: 1 1 45%;
+    max-width: 450px;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.product-detail-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.product-detail-info {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-detail-name {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $text-color-dark;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.product-detail-category {
+    font-size: 1rem;
+    color: $text-color-light;
+    margin-bottom: 10px;
+    span {
+        font-weight: 500;
+        color: $primary-orange;
+    }
+}
+
+.product-detail-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $price-color;
+    margin-bottom: 25px;
+}
+
+.product-detail-description-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: $text-color-dark;
+    margin-bottom: 8px;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 5px;
+}
+
+.product-detail-description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-color-light;
+    margin-bottom: 30px;
+    white-space: pre-wrap;
+}
+
+.product-detail-add-to-cart-button {
+    background-color: $primary-orange;
+    color: $button-text-color;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
+
+    &:hover {
+        background-color: darken($primary-orange, 10%);
+    }
+}
+
+.product-detail-recommendations-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid $border-color;
+}

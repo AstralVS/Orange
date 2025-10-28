@@ -1,0 +1,15 @@
+.homepage-component-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.homepage-main-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.homepage-content-area {
+    flex-grow: 1;
+}

@@ -1,0 +1,76 @@
+$primary-orange: #ffa500;
+$card-height-approx: 380px;
+$gap-between-rows: 20px;
+$scrollbar-track-color: #f1f1f1;
+$scrollbar-thumb-color: $primary-orange;
+$scrollbar-thumb-hover-color: darken($primary-orange, 10%);
+
+.product-grid-component-container {
+    width: 1000px;
+    padding: 0 15px;
+}
+
+.product-grid-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.product-grid-scroll-container {
+    max-height: ($card-height-approx * 3) + ($gap-between-rows * 2);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $scrollbar-track-color;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $scrollbar-thumb-color;
+        border-radius: 10px;
+        border: 2px solid $scrollbar-track-color;
+
+        &:hover {
+            background-color: $scrollbar-thumb-hover-color;
+        }
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+}
+
+.product-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: $gap-between-rows;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-grid-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+    padding: 20px;
+}
+
+.product-grid-error {
+    color: red;
+}

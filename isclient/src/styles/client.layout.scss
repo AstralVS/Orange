@@ -1,0 +1,13 @@
+$spacing-unit: 20px;
+
+.client-layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.client-layout-content {
+    flex-grow: 1;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+}

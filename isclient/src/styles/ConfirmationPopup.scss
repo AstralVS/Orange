@@ -1,0 +1,87 @@
+$primary-orange: #ffa500;
+$button-text-color: white;
+$text-color-dark: #333;
+$border-color: #e0e0e0;
+$overlay-background: rgba(0, 0, 0, 0.6);
+$popup-background: white;
+$cancel-button-bg: #6c757d;
+$cancel-button-hover-bg: darken($cancel-button-bg, 10%);
+
+.confirmation-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlay-background;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.confirmation-popup-content {
+    background-color: $popup-background;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.confirmation-popup-title {
+    font-size: 1.6rem;
+    color: $text-color-dark;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.confirmation-popup-message {
+    font-size: 1rem;
+    color: $text-color-dark;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.confirmation-popup-total {
+    font-size: 1.1rem;
+    color: $text-color-dark;
+    margin-bottom: 25px;
+    strong {
+        color: $primary-orange;
+        font-size: 1.3rem;
+    }
+}
+
+.confirmation-popup-actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.confirmation-popup-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: 120px;
+}
+
+.confirmation-popup-button-cancel {
+    background-color: $cancel-button-bg;
+    color: $button-text-color;
+    &:hover {
+        background-color: $cancel-button-hover-bg;
+    }
+}
+
+.confirmation-popup-button-confirm {
+    background-color: $primary-orange;
+    color: $button-text-color;
+    &:hover {
+        background-color: darken($primary-orange, 10%);
+    }
+}

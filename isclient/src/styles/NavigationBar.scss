@@ -1,0 +1,96 @@
+$primary-orange: #ff7b00;
+$darker-orange: #e65c00;
+$navbar-text-color: #ffffff;
+$navbar-link-hover-bg: $primary-orange;
+$navbar-link-hover-text: #ffffff;
+
+$container-max-width: 1200px;
+
+.navbar-component {
+    font-size: 1.8rem;
+    background-color: $darker-orange;
+    padding: 1.5rem 0;
+    color: $navbar-text-color;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+}
+
+.navbar-container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-left-placeholder {
+    flex: 1;
+}
+
+.navbar-center {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-navlink {
+    color: $navbar-text-color;
+    text-decoration: none;
+    padding: 1rem 1.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+        transform 0.1s ease;
+
+    &:hover {
+        background-color: $navbar-link-hover-bg;
+        color: $navbar-link-hover-text;
+        transform: translateY(-1px);
+    }
+}
+
+.navbar-active-link {
+    background-color: $navbar-link-hover-bg;
+    color: $navbar-link-hover-text;
+    transform: translateY(-1px);
+}
+
+.navbar-logout-button {
+    background-color: transparent;
+    color: $navbar-text-color;
+    border: 1px solid $navbar-text-color;
+    padding: 8px 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+        background-color: $navbar-text-color;
+        color: $primary-orange;
+    }
+}
+
+.navbar-greeting {
+    font-size: 1.7rem;
+    margin-right: 15px;
+}
+
+.navbar-left-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
